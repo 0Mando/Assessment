@@ -6,7 +6,7 @@ fetch(`${ API }`)
     .catch(error => console.error(error))
 
 const getData = (data) =>{
-    data.sort(function (a,b){
+    let asc = data.sort(function (a,b){
         if(a.name.official > b.name.official){
             return 1
         }
@@ -15,16 +15,20 @@ const getData = (data) =>{
         }
         return 0
     })
+
+    console.log(asc)
+
     let body = ``
+
     for(let i = 0; i < data.length; i++){
         body +=
         `<tr>
-            <td>${data[i].name.official}</td>
-            <td>${data[i].capital}</td>
-            <td>${data[i].region}</td>
-            <td>${data[i].languages}</td>
-            <td>${data[i].population}</td>
-            <td>${data[i].flag}</td>
+            <td>${asc[i].name.official}</td>
+            <td>${asc[i].capital}</td>
+            <td>${asc[i].region}</td>
+            <td>${asc[i].languages}</td>
+            <td>${asc[i].population}</td>
+            <td>${asc[i].flag}</td>
         </tr>
         `
     }
