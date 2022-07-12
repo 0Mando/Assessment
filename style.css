@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+header{
+    background-color: #2D3450;
+    color: #FFFFFF;
+    padding: 20px 50px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.table-container{
+    margin-top: 30px;
+}
+
+thead{
+    background-color: orange;
+    color: #FFFFFF;
+    padding: 4px;
+    font-size: 20px;
+}
+
+th{
+    width: 400px;
+}
+
+td{
+    width: 400px;
+    text-align: center;
+    padding: 15px;
+}
