@@ -6,6 +6,15 @@ fetch(`${ API }`)
     .catch(error => console.error(error))
 
 const getData = (data) =>{
+    data.sort(function (a,b){
+        if(a.name.official > b.name.official){
+            return 1
+        }
+        if(a.name.official < b.name.official){
+            return -1
+        }
+        return 0
+    })
     let body = ``
     for(let i = 0; i < data.length; i++){
         body +=
